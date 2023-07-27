@@ -4,6 +4,10 @@ import { Asset, Platform, Vulnerability } from "./interfaces/input.interface";
 import { InputData } from "./interfaces/input-data.interface";
 
 import processAssetVulnerabilityPairs from "./assetVulnerabilityProcessor";
+import {
+  INVALID_INPUT_DATA_ERROR,
+  UNABLE_TO_PROCESS_FILES_ERROR,
+} from "./constants/error-messages";
 
 async function main(
   vulnerabilitiesFilePath: string,
@@ -17,6 +21,10 @@ async function main(
       FileUtils.readJsonFile<Asset[]>(assetsFilePath),
       FileUtils.readJsonFile<Platform[]>(platformsFilePath),
     ]);
+
+    if (!vulnerabilities || !assets || !platforms) {
+      throw new Error(INVALID_INPUT_DATA_ERROR);
+    }
 
     // Write output file
     const inputData: InputData = { vulnerabilities, assets, platforms };
@@ -34,5 +42,5 @@ const [vulnerabilitiesFile, assetsFile, platformsFile] = process.argv.slice(-3);
 
 // Run the main function with provided file paths
 main(vulnerabilitiesFile, assetsFile, platformsFile).catch(() => {
-  console.log("Unable to process the files");
+  console.log(UNABLE_TO_PROCESS_FILES_ERROR);
 });
