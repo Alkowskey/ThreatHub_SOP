@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/main.ts",
-    "start-default": "npm run start ./input_files/input_assets.json ./input_files/input_platforms.json ./input_files/input_vulnerabilities.json",
+    "start-default": "npm run start ./input_files/input_vulnerabilities.json ./input_files/input_assets.json ./input_files/input_platforms.json",
     "build": "ncc build src/main.ts -o dist",
     "test": "jest",
     "lint": "eslint . --ext .ts --max-warnings=0",

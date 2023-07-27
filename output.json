@@ -1,35 +1,17 @@
 [
   {
-    "id": "asset1",
-    "name": "Asset X",
-    "platformRelations": [
-      {
-        "platformId": "platform1",
-        "minVersion": "1.5",
-        "maxVersion": "2.5"
-      }
-    ]
+    "assetId": "asset1",
+    "vulnerabilityId": "vuln1",
+    "platformName": "Platform Alpha"
   },
   {
-    "id": "asset2",
-    "name": "Asset Y",
-    "platformRelations": [
-      {
-        "platformId": "platform2",
-        "minVersion": "3.2",
-        "maxVersion": "4.5"
-      }
-    ]
+    "assetId": "asset1",
+    "vulnerabilityId": "vuln3",
+    "platformName": "Platform Alpha"
   },
   {
-    "id": "asset3",
-    "name": "Asset Z",
-    "platformRelations": [
-      {
-        "platformId": "platform3",
-        "minVersion": "5.0",
-        "maxVersion": "6.0"
-      }
-    ]
+    "assetId": "asset2",
+    "vulnerabilityId": "vuln2",
+    "platformName": "Platform Beta"
   }
 ]

@@ -31,5 +31,16 @@
         "maxVersion": "6.0"
       }
     ]
+  },
+  {
+    "id": "asset4",
+    "name": "Asset XX",
+    "platformRelations": [
+      {
+        "platformId": "platform1",
+        "minVersion": "0.1",
+        "maxVersion": "0.2"
+      }
+    ]
   }
 ]

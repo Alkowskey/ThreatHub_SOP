@@ -1,5 +1,5 @@
 import * as fse from "fs-extra";
-import { Asset, Platform, Vulnerability } from "../interfaces/input.interface";
+import { AssetVulnerabilityPair } from "../interfaces/input-relations.interface";
 
 export default class FileUtils {
   static async readJsonFile<T>(filePath: string): Promise<T> {
@@ -9,7 +9,7 @@ export default class FileUtils {
 
   static async writeJsonFile(
     filePath: string,
-    data: Vulnerability | Asset | Platform
+    data: AssetVulnerabilityPair[]
   ): Promise<void> {
     await fse.writeFile(filePath, JSON.stringify(data, null, 2));
   }
