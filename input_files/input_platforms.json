@@ -1,0 +1,14 @@
+[
+  {
+    "id": "platform1",
+    "name": "Platform Alpha"
+  },
+  {
+    "id": "platform2",
+    "name": "Platform Beta"
+  },
+  {
+    "id": "platform3",
+    "name": "Platform Gamma"
+  }
+]

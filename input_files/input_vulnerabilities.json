@@ -1,0 +1,35 @@
+[
+  {
+    "id": "vuln1",
+    "name": "Security Vulnerability A",
+    "platformRelations": [
+      {
+        "platformId": "platform1",
+        "minVersion": "1.0",
+        "maxVersion": "2.0"
+      }
+    ]
+  },
+  {
+    "id": "vuln2",
+    "name": "Security Vulnerability B",
+    "platformRelations": [
+      {
+        "platformId": "platform2",
+        "minVersion": "3.0",
+        "maxVersion": "4.0"
+      }
+    ]
+  },
+  {
+    "id": "vuln3",
+    "name": "Security Vulnerability C",
+    "platformRelations": [
+      {
+        "platformId": "platform1",
+        "minVersion": "2.5",
+        "maxVersion": "3.5"
+      }
+    ]
+  }
+]

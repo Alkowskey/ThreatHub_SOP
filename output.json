@@ -1,0 +1,35 @@
+[
+  {
+    "id": "asset1",
+    "name": "Asset X",
+    "platformRelations": [
+      {
+        "platformId": "platform1",
+        "minVersion": "1.5",
+        "maxVersion": "2.5"
+      }
+    ]
+  },
+  {
+    "id": "asset2",
+    "name": "Asset Y",
+    "platformRelations": [
+      {
+        "platformId": "platform2",
+        "minVersion": "3.2",
+        "maxVersion": "4.5"
+      }
+    ]
+  },
+  {
+    "id": "asset3",
+    "name": "Asset Z",
+    "platformRelations": [
+      {
+        "platformId": "platform3",
+        "minVersion": "5.0",
+        "maxVersion": "6.0"
+      }
+    ]
+  }
+]
