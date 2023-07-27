@@ -8,17 +8,18 @@ export default class VersionValidators {
 
   static isAffectedVersion(
     assetRelation: PlatformRelation,
-    vulnerabilittyRelation: PlatformRelation
+    vulnerabilityRelation: PlatformRelation
   ): boolean {
     //check if the asset min version is in between the vulnerability min and max version
+
     if (
       this.isGreaterOrEqualVersion(
         assetRelation.minVersion,
-        vulnerabilittyRelation.minVersion
+        vulnerabilityRelation.minVersion
       ) &&
       this.isLesserOrEqualVersion(
         assetRelation.minVersion,
-        vulnerabilittyRelation.maxVersion
+        vulnerabilityRelation.maxVersion
       )
     )
       return true;
@@ -27,11 +28,11 @@ export default class VersionValidators {
     if (
       this.isGreaterOrEqualVersion(
         assetRelation.maxVersion,
-        vulnerabilittyRelation.minVersion
+        vulnerabilityRelation.minVersion
       ) &&
       this.isLesserOrEqualVersion(
         assetRelation.maxVersion,
-        vulnerabilittyRelation.maxVersion
+        vulnerabilityRelation.maxVersion
       )
     )
       return true;
@@ -100,8 +101,9 @@ export default class VersionValidators {
   } {
     const [major, minor, patch] = version
       .split(".")
-      .map(parseInt)
+      .map(Number)
       .map((n) => (isNaN(n) ? 0 : n));
+
     return {
       major: major,
       minor: minor,
